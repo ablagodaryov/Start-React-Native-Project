@@ -1,14 +1,24 @@
 {
-  "presets": ["react-native"],
+  "presets": [
+    "module:metro-react-native-babel-preset"
+  ],
+
+  // @Note: add this
   "plugins": [
-    "transform-decorators-legacy",
     [
       "module-resolver",
       {
         "cwd": "babelrc",
-        "root": [
-          "./"
-        ]
+        "root": "./",
+        "alias": {
+          "src": "./src",
+        }
+      }
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
       }
     ]
   ]

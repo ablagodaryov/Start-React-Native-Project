@@ -7,6 +7,9 @@
             "jsx": true
         }
     },
+    "globals": {
+        "__DEV__": true
+    },
     "env": {
         "es6": true,
         "jest": true,
@@ -69,7 +72,13 @@
         // Allow to use hasOwnProperty
         "no-prototype-builtins": 0,
         // Allow to not define default props for not required props
-        "react/require-default-props": 0
+        "react/require-default-props": 0,
+        // line breaks inside function parentheses
+        "function-paren-newline": 0,
+        // allow spacing after closing `>`
+        "react/jsx-tag-spacing": 0,
+        "react/destructuring-assignment": 0,
+        "import/order": 0
     },
     "extends": [
         "airbnb",
